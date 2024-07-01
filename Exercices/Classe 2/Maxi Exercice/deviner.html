@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1 class="text-3xl font-bold text-emerald-600 underline">
+    DEVINEZ LE NOMBRE!
+  </h1>
+
+
+    <script>
+        // Function to start the number guessing game
+    function startGame() {
+    // Generate a random number between 1 and 1000
+    let numRandom = Math.floor(Math.random() * 1000) + 1;
+    console.log("Random number:", numRandom); // Log the random number for testing purposes
+
+    let deviner = false;
+
+    while (!deviner) {
+        let numUserInput = prompt("Devine le chiffre entre 1 et 1000, ou entrez 'exit' pour quitter le jeu");
+
+        // Check if user wants to exit
+        if (numUserInput.toLowerCase() === 'exit') {
+            alert("Vous avez quitté le jeu.");
+            return; // Exit the function and stop playing
+        }
+
+        // Convert user input to a number
+        let numUser = parseInt(numUserInput);
+
+        // Check if the user input is a valid number
+        if (isNaN(numUser)) {
+            alert("Veuillez entrer un numéro valide.");
+        } else {
+            // Compare user's number with the random number
+            if (numUser === numRandom) {
+                alert("Youpi! Tu as deviné le bon nombre.");
+                deviner = true; // End the loop when the random number is guessed correctly
+            } else if (numUser < numRandom) {
+                alert("C'est plus grand.");
+            } else {
+                alert("C'est plus petit.");
+            }
+        }
+    }
+
+    // Ask user if they want to play again
+    let playAgain = confirm("Voulez-vous jouer à nouveau?");
+    if (playAgain) {
+        startGame(); // Restart the game if user chooses to play again
+    } else {
+        alert("Merci d'avoir joué au jeu de deviner le nombre!");
+    }
+}
+
+// Call the startGame function to begin the game
+startGame();
+
+    </script>
+</body>
+</html>
