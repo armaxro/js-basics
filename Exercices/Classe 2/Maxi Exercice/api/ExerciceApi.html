@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/execercieApi.css">
+    <title>API</title>
+<body>
+
+<div class="min-h-screen bg-gray-200 flex justify-center items-center">
+    <!-- Start of component -->
+    <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+       <div id="header" class="flex items-center mb-4"> 
+          <img alt="avatar" class="w-6/12 rounded-full border-2 border-gray-300" src="img/GIU AMA 209-12.jpg"/>
+          <div id="header-text" class="leading-5 ml-6 sm">
+             <h4 id="name" class="text-xl font-bold text-yellow-800 hover:text-yellow-400">Cat's Facts</h4>
+          </div>
+       </div>
+       <div id="quote">
+          <q class="italic text-gray-600"></q>
+       </div>
+    </div>
+    <!-- End of component -->
+ </div>
+
+
+
+
+    <!--
+        <h1 id='user-name'>Waiting for data</h1>
+        <h2 id='user-email'>Waiting for data</h1>
+        <script>
+          fetch('https://api.github.com/users/armaxro')
+            .then(response => response.json())
+            .then(data => {
+              document.querySelector('#user-name').textContent = data.login
+              document.querySelector('#user-email').textContent = data.url
+            })
+        </script>
+    -->    
+       <script src="JS/exerciceApi.js"></script>
+</body>
+</html>
