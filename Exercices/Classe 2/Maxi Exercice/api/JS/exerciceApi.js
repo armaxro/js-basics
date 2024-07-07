@@ -8,12 +8,17 @@ fetch('https://api.github.com/users/armaxro')
     .catch(err => console.log('Solicitud fallida', err)); // Capturar errores
 
 */
+const newFactBtn = document.getElementById('newFactBtn');
+newFactBtn.addEventListener('click', getNewFact);
 
-fetch('https://catfact.ninja/fact')
-  .then(response => response.json())
-  .then(data => {
-    document.querySelector('#quote').textContent = data.fact;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+function getNewFact(){
+  fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('#quote').textContent = data.fact;
+    })
+    .catch(error => {
+     console.error('Error:', error);
+    });
+}
+getNewFact();

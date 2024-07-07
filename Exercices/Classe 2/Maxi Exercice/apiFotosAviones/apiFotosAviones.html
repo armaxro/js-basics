@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fotos de Aviones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .photo {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 300px;
+    }
+    .photo img {
+      width: 100%;
+      height: auto;
+    }
+    .photo-info {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fotos de Aviones</h1>
+  <div id="photos">Cargando fotos de aviones...</div>
+
+  <script src="appFotos.js"></script>
+</body>
+</html>
